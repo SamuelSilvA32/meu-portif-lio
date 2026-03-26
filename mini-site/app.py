@@ -128,17 +128,25 @@ if img:
         st.subheader("Sobre mim")
 
         st.write("""
- Crio, analiso, mostro. Quero fazer isso no mercado de verdade.
+ 📊 Analiso, construo, comunico. Meu objetivo agora é transpor esses 
+projetos para o mercado.
 
-Tenho projetos no GitHub que mostram meu trabalho: análise de IPVA no RJ, 
-dashboards de saúde mental e outras explorações com Python, Pandas e Streamlit.
-Sei o que posso entregar hoje — e tenho muita vontade de aprender o 
-que ainda não sei, encarando desafios reais.
-Estou aberto a CLT, freela, projetos colaborativos ou qualquer formato 
-que me coloque dentro do jogo, resolvendo problemas com dados.
+Desenvolvo análises e dashboards com Python, Pandas, Streamlit e SQL — 
+tudo disponível em código aberto no GitHub. Cada projeto foi uma oportunidade 
+de refinar não apenas a técnica, mas também a capacidade de transformar dados 
+em narrativas claras e acionáveis.
 
- Se você precisa de alguém que queira estar lá, aprender na prática 
-e entregar valor desde o primeiro dia: me chama. Bora trocar uma ideia?
+Tenho clareza do que posso entregar hoje e, sobretudo, consciência de que 
+o ambiente real exige adaptação, resiliência e aprendizado contínuo. 
+É justamente isso que busco.
+
+Estou aberto a relações profissionais nas mais diversas modalidades — 
+seja CLT, colaboração freelance ou projetos pontuais. O que me move é 
+a oportunidade de estar onde os problemas de fato acontecem e contribuir 
+com soluções sustentadas em dados.
+
+Se você procura alguém disposto a aprender fazendo, com base sólida 
+e compromisso com resultado: estou à disposição para conversarmos.
 """)
 
 
