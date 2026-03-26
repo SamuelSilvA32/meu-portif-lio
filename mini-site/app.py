@@ -5,7 +5,7 @@ from pathlib import Path
 st.set_page_config(
     layout="wide",
     page_title="Curriculo digital",
-    page_icon="imgs/icons8-manager-48.png"
+    page_icon="mini-site/imgs/icons8-manager-48.png"
 )
 
 st.markdown("""
