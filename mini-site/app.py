@@ -128,10 +128,17 @@ if img:
         st.subheader("Sobre mim")
 
         st.write("""
-Estudante de Análise e Desenvolvimento de Sistemas com foco em análise de dados.
-Experiência prática com Python, Pandas, Streamlit e tratamento de dados públicos.
-Desenvolvo dashboards, automatizações e análises para geração de insights.
-Busco oportunidade como Analista de Dados Júnior ou área administrativa com dados.
+ Crio, analiso, mostro. Quero fazer isso no mercado de verdade.
+
+Tenho projetos no GitHub que mostram meu trabalho: análise de IPVA no RJ, 
+dashboards de saúde mental e outras explorações com Python, Pandas e Streamlit.
+Sei o que posso entregar hoje — e tenho muita vontade de aprender o 
+que ainda não sei, encarando desafios reais.
+Estou aberto a CLT, freela, projetos colaborativos ou qualquer formato 
+que me coloque dentro do jogo, resolvendo problemas com dados.
+
+ Se você precisa de alguém que queira estar lá, aprender na prática 
+e entregar valor desde o primeiro dia: me chama. Bora trocar uma ideia?
 """)
 
 
