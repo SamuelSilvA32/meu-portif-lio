@@ -128,23 +128,19 @@ if img:
         st.subheader("Sobre mim")
 
         st.write("""
-  Analiso, construo, comunico. Meu objetivo agora é transpor esses 
-projetos para o mercado.
+📊 Analiso, construo, comunico. Próximo passo: o mercado.
 
- Desenvolvo análises e dashboards com: Python, Pandas, Streamlit Power BI etc.
- Cada projeto foi uma oportunidade 
-de refinar não apenas a técnica, mas também a capacidade de transformar dados 
-em narrativas claras e acionáveis.
- Tenho clareza do que posso entregar hoje e, sobretudo, consciência de que 
-o ambiente real exige adaptação, resiliência e aprendizado contínuo. 
-É justamente isso que busco.
- Estou aberto a relações profissionais nas mais diversas modalidades,
-seja CLT, colaboração freelance ou projetos pontuais. O que me move é 
-a oportunidade de estar onde os problemas de fato acontecem e contribuir 
-com soluções sustentadas em dados.
+Projetos práticos com Python, Pandas, Streamlit e SQL — todos em código aberto. 
+Crio dashboards interativos também no Power BI, transformando dados em 
+insights claros para decisões estratégicas.
 
- Se você procura alguém disposto a aprender fazendo, com base sólida 
-e compromisso com resultado: estou à disposição para conversarmos.
+Mais que ferramentas, desenvolvi uma abordagem: entender o problema antes 
+de escrever uma linha de código ou montar um visual.
+
+Estou pronto para contribuir desde o primeiro dia, aberto a CLT, freelance 
+ou colaborações pontuais. O que me move é resolver problemas reais com dados.
+
+📍 Vamos conversar?
 """)
 
 
