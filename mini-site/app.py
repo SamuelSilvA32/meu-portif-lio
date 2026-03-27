@@ -8,220 +8,40 @@ st.set_page_config(
     page_icon="mini-site/imgs/icons8-manager-48.png"
 )
 
-# ============================================
-# CSS RESPONSIVO COMPLETO
-# ============================================
 st.markdown("""
 <style>
-/* Reset e configurações gerais */
+
+/* reduz espaço topo */
 .block-container {
-    padding-top: 1rem;
+    padding-top: 2.9rem;
     padding-bottom: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-/* Títulos */
-h1, h2, h3, h4 {
+/* títulos */
+h1, h2, h3 {
     font-weight: 600;
-    word-break: break-word;
 }
 
-h1 {
-    font-size: clamp(1.5rem, 5vw, 2.2rem);
-}
-
-h2 {
-    font-size: clamp(1.3rem, 4vw, 1.8rem);
-}
-
-h3 {
-    font-size: clamp(1.1rem, 3vw, 1.5rem);
-}
-
-/* Texto */
-p, li, .stMarkdown {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    line-height: 1.5;
-    word-break: break-word;
-}
-
-/* Imagem de perfil responsiva */
-.profile-img {
-    width: min(140px, 25vw);
-    height: min(140px, 25vw);
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
-
-/* ========== CORREÇÃO DAS STACKS ========== */
-/* Container das stacks */
-.stacks-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.stack-item {
-    text-align: center;
-    flex: 1 1 auto;
-    min-width: 70px;
-    padding: 0.5rem;
-}
-
-.stack-item img {
-    width: clamp(35px, 6vw, 45px);
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.stack-item p {
-    margin-top: 0.5rem;
-    font-size: clamp(0.7rem, 2vw, 0.9rem);
-    margin-bottom: 0;
-}
-
-/* Para mobile - mantém na horizontal */
-@media (max-width: 768px) {
-    .stacks-container {
-        gap: 0.5rem;
-    }
-    
-    .stack-item {
-        min-width: 60px;
-    }
-    
-    .stack-item img {
-        width: clamp(30px, 8vw, 40px);
-    }
-}
-
-/* Cards de projetos */
-.project-card {
+/* cards apenas dentro da seção projetos */
+div[data-testid="stHorizontalBlock"] > div:nth-child(1),
+div[data-testid="stHorizontalBlock"] > div:nth-child(2) {
     transition: 0.2s;
     border-radius: 12px;
-    padding: 1rem;
-    background: transparent;
 }
 
-.project-card:hover {
+/* hover */
+div[data-testid="stHorizontalBlock"] > div:nth-child(1):hover,
+div[data-testid="stHorizontalBlock"] > div:nth-child(2):hover {
     box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
     transform: translateY(-3px);
 }
 
-/* Imagens dos cards */
-.project-img {
-    width: 100%;
-    height: auto;
-    max-height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Botões */
-.stButton button, .stLinkButton a {
-    width: 100%;
+/* botão */
+.stLinkButton a {
     border-radius: 8px;
-    padding: 0.5rem 1rem;
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    padding: 8px 16px;
 }
 
-/* ========== RESPONSIVIDADE MOBILE ========== */
-@media (max-width: 768px) {
-    /* Ajuste geral */
-    .block-container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    
-    /* Colunas viram blocos verticais */
-    div[data-testid="column"] {
-        width: 100% !important;
-        flex: 1 1 100% !important;
-        margin-bottom: 1.5rem;
-    }
-    
-    /* Container de linhas */
-    div[data-testid="stHorizontalBlock"] {
-        flex-wrap: wrap !important;
-    }
-    
-    /* Espaçamento entre seções */
-    hr {
-        margin: 1.5rem 0;
-    }
-    
-    /* Centraliza textos em colunas */
-    div[data-testid="column"]:first-child {
-        text-align: center;
-    }
-    
-    div[data-testid="column"]:nth-child(2) {
-        text-align: left;
-    }
-    
-    /* Cards de projetos no mobile */
-    .project-card {
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* ========== TABLET (entre 769px e 1024px) ========== */
-@media (min-width: 769px) and (max-width: 1024px) {
-    div[data-testid="column"] {
-        width: 50% !important;
-        flex: 1 1 45% !important;
-    }
-    
-    .block-container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-/* ========== DESKTOP (acima de 1024px) ========== */
-@media (min-width: 1025px) {
-    .block-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-/* Links e ícones sociais */
-.social-links {
-    text-align: center;
-    margin: 1rem 0;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 0 0.75rem;
-    transition: transform 0.2s;
-}
-
-.social-links a:hover {
-    transform: translateY(-2px);
-}
-
-.social-links img {
-    width: clamp(24px, 5vw, 28px);
-    height: auto;
-}
-
-/* Rodapé */
-.footer {
-    text-align: center;
-    opacity: 0.6;
-    font-size: clamp(0.7rem, 2vw, 0.8rem);
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(128, 128, 128, 0.2);
-}
 </style>
 """, unsafe_allow_html=True)
 
