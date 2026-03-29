@@ -177,7 +177,7 @@ projects = [
     Um protótipo de assistente de análise de requisitos para transformar ideias de projeto em documentação prática,
     organizado como uma aplicação web via Streamlit e alimentado por LLM (Groq / llama-3).
     O foco é gerar rapidamente o escopo MVP e sugerir arquitetura, dependências e fases de desenvolvimento.
-    """
+    """,
     "link": "https://github.com/SamuelSilvA32/Agente_de_IA_v1.0.git"
     }
 
