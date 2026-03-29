@@ -173,8 +173,10 @@ projects = [
     {
     "title": "Agente IA",
     "image": "project03.png",
-    "desc": "Agente simples utilizando IA",
-    "link": "https://..."
+    "desc": "Um protótipo de assistente de análise de requisitos para transformar ideias de projeto em documentação prática,
+    organizado como uma aplicação web via Streamlit e alimentado por LLM (Groq / llama-3).
+    O foco é gerar rapidamente o escopo MVP e sugerir arquitetura, dependências e fases de desenvolvimento.",
+    "link": ""
     }
 
 ]
