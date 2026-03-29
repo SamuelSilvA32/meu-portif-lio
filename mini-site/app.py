@@ -168,7 +168,15 @@ projects = [
         "desc": """Análise exploratória aplicada a dados fictícios de saúde mental, 
         estruturada em uma aplicação interativa com Streamlit.""",
         "link": "https://zwrvbm342tawpbqrbomzzb.streamlit.app/"
+    },
+
+    {
+    "title": "Agente IA",
+    "image": "project03.png",
+    "desc": "Agente simples utilizando IA",
+    "link": "https://..."
     }
+
 ]
 
 cols = st.columns(2)
