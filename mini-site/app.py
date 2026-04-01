@@ -144,6 +144,28 @@ e compromisso com resultado: estou à disposição para conversarmos.
 
 # ---------------- STACK ---------------- #
 
+st.markdown("""
+<style>
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.stack-item img {
+    display: block;
+    margin: 0 auto;
+}
+
+.stack-item {
+    padding: 8px 0;
+}
+</style>
+""", unsafe_allow_html=True)
+
 stack = [
     ("python_18894.png", "Python"),
     ("icons8-pandas-48.png", "Pandas"),
@@ -154,12 +176,21 @@ stack = [
     ("icons8-entorpecido-48.png", "NumPy"),
 ]
 
-cols = st.columns(4)
+html = '<div class="stack-grid">'
 
-for i, (img, label) in enumerate(stack):
-    with cols[i % 4]:
-        safe_image(img, 40)
-        st.caption(label)
+for img, label in stack:
+    img64 = img_to_base64(img)
+    if img64:
+        html += f'''
+        <div class="stack-item">
+            <img src="data:image/png;base64,{img64}" width="40">
+            <div style="font-size:12px; opacity:0.8">{label}</div>
+        </div>
+        '''
+
+html += '</div>'
+
+st.markdown(html, unsafe_allow_html=True)
 
 st.markdown("---")
 
