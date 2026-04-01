@@ -14,24 +14,46 @@ st.set_page_config(
 )
 
 # ---------------- CSS ---------------- #
+
 st.markdown("""
 <style>
 
-/* stack responsiva */
-@media (max-width: 900px) {
-    div[data-testid="stHorizontalBlock"] {
-        flex-wrap: wrap;
-    }
-    div[data-testid="stHorizontalBlock"] > div {
-        flex: 1 1 33% !important;
-        text-align:center;
-    }
+.block-container {
+    padding-top: 2.9rem;
+    padding-bottom: 1rem;
 }
 
-@media (max-width: 600px) {
-    div[data-testid="stHorizontalBlock"] > div {
-        flex: 1 1 50% !important;
-    }
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+div[data-testid="stHorizontalBlock"] > div {
+    transition: 0.2s;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+div[data-testid="stHorizontalBlock"] > div:hover {
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+}
+
+/* titulo clicável estilo botão */
+.project-title a {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.project-title a:hover {
+    background-color: #1a1a1a;
+    color: #ffffff !important;
 }
 
 </style>
@@ -132,13 +154,14 @@ stack = [
     ("icons8-entorpecido-48.png", "NumPy"),
 ]
 
-# número de colunas responsivo
 cols = st.columns(4)
 
 for i, (img, label) in enumerate(stack):
     with cols[i % 4]:
         safe_image(img, 40)
         st.caption(label)
+
+st.markdown("---")
 
 # ---------------- PROJETOS ---------------- #
 
