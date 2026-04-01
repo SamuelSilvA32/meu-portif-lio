@@ -14,46 +14,84 @@ st.set_page_config(
 )
 
 # ---------------- CSS ---------------- #
-
 st.markdown("""
 <style>
 
+/* largura geral */
 .block-container {
-    padding-top: 2.9rem;
-    padding-bottom: 1rem;
+    max-width: 1100px;
+    padding-top: 2rem;
 }
 
-h1, h2, h3 {
-    font-weight: 600;
+/* HERO */
+.hero {
+    padding: 20px 0 10px 0;
 }
 
-div[data-testid="stHorizontalBlock"] > div {
-    transition: 0.2s;
-    border-radius: 12px;
-    padding: 12px;
+/* STACK GRID */
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
-div[data-testid="stHorizontalBlock"] > div:hover {
-    box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
-    transform: translateY(-3px);
+.stack-item img {
+    width:40px;
+    margin-bottom:5px;
 }
 
-/* titulo clicável estilo botão */
-.project-title a {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 8px;
-    background-color: #000000;
-    color: #ffffff !important;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 8px;
-    margin-bottom: 8px;
+/* PROJECT GRID */
+.projects-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap:25px;
+    margin-top:20px;
 }
 
-.project-title a:hover {
-    background-color: #1a1a1a;
-    color: #ffffff !important;
+/* CARD */
+.card {
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    transition:0.2s;
+    background:white;
+}
+
+.card:hover {
+    transform:translateY(-4px);
+    box-shadow:0 6px 25px rgba(0,0,0,0.08);
+}
+
+.card img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-body {
+    padding:18px;
+}
+
+/* TITULO BOTAO */
+.card-title {
+    display:block;
+    background:black;
+    color:white !important;
+    text-align:center;
+    padding:10px;
+    border-radius:8px;
+    font-weight:600;
+    text-decoration:none;
+    margin-bottom:10px;
+}
+
+/* MOBILE */
+@media (max-width:600px){
+    .card img{
+        height:170px;
+    }
 }
 
 </style>
@@ -143,78 +181,52 @@ e compromisso com resultado: estou à disposição para conversarmos.
 """)
 
 # ---------------- STACK ---------------- #
-# ---------------- STACK ---------------- #
+stack_html = '<div class="stack-grid">'
 
-stack = [
-    ("python_18894.png", "Python"),
-    ("icons8-pandas-48.png", "Pandas"),
-    ("icons8-sql-48.png", "SQL"),
-    ("icons8-microsoft-excel-2019-48.png", "Excel"),
-    ("icons8-iluminado-48.png", "Streamlit"),
-    ("icons8-poder-bi-2021-48.png", "Power BI"),
-    ("icons8-entorpecido-48.png", "NumPy"),
-]
+for img, label in stack:
+    base = img_to_base64(img)
+    if base:
+        stack_html += f"""
+        <div class="stack-item">
+            <img src="data:image/png;base64,{base}">
+            <div>{label}</div>
+        </div>
+        """
 
-# divide em linhas de 4
-rows = [stack[i:i+4] for i in range(0, len(stack), 4)]
+stack_html += "</div>"
 
-for row in rows:
-    cols = st.columns(len(row))
-    for col, (img, label) in zip(cols, row):
-        with col:
-            safe_image(img, 40)
-            st.caption(label)
+st.markdown(stack_html, unsafe_allow_html=True)
 
 # ---------------- PROJETOS ---------------- #
-
 st.markdown("## Projetos")
 
-projects = [
-    {
-        "title": "Análise da Arrecadação de IPVA no Estado do Rio de Janeiro (2017)",
-        "image": "project02.png",
-        "desc": """Este projeto apresenta uma análise exploratória da arrecadação de IPVA 
-        no estado do Rio de Janeiro no ano de 2017, utilizando dados públicos 
-        disponibilizados pelo portal de dados abertos do governo brasileiro.""",
-        "link": "https://github.com/SamuelSilvA32/An-lise-da-Arrecada-o-de-IPVA-no-Estado-do-Rio-de-Janeiro-2017-.git"
-    },
-    {
-        "title": "Análise Exploratória e Visualização de Dados com Streamlit",
-        "image": "project01.png",
-        "desc": """Análise exploratória aplicada a dados fictícios de saúde mental, 
-        estruturada em uma aplicação interativa com Streamlit.""",
-        "link": "https://zwrvbm342tawpbqrbomzzb.streamlit.app/"
-    },
+html = '<div class="projects-grid">'
 
-    {
-    "title": "Agente IA",
-    "image": "project03.png",
-    "desc": """
-    Um protótipo de assistente de análise de requisitos para transformar ideias de projeto em documentação prática,
-    organizado como uma aplicação web via Streamlit e alimentado por LLM (Groq / llama-3).
-    O foco é gerar rapidamente o escopo MVP e sugerir arquitetura, dependências e fases de desenvolvimento.
-    """,
-    "link": "https://github.com/SamuelSilvA32/Agente_de_IA_v1.0.git"
-    }
+for p in projects:
+    img = img_to_base64(p["image"])
 
-]
+    html += f"""
+    <div class="card">
 
-cols = st.columns(2)
+        <img src="data:image/png;base64,{img}">
 
-for i, p in enumerate(projects):
-    with cols[i % 2]:
-        img_card(p["image"])
+        <div class="card-body">
 
-        st.markdown(
-            f'''<div class="project-title">
-<a href="{p["link"]}" target="_blank">{p["title"]}</a>
-</div>''',
-            unsafe_allow_html=True
-        )
+        <a href="{p["link"]}" class="card-title" target="_blank">
+        {p["title"]}
+        </a>
 
-        st.write(p["desc"])
+        <div style="font-size:14px; opacity:0.8">
+        {p["desc"]}
+        </div>
 
-st.markdown("---")
+        </div>
+    </div>
+    """
+
+html += "</div>"
+
+st.markdown(html, unsafe_allow_html=True)
 
 # ---------------- CONTATO ---------------- #
 
