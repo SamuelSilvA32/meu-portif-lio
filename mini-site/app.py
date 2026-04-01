@@ -142,7 +142,7 @@ com soluções sustentadas em dados.
 e compromisso com resultado: estou à disposição para conversarmos.
 """)
 
-# ---------------- STACK ---------------- #
+
 # ---------------- STACK ---------------- #
 
 
@@ -155,8 +155,6 @@ opacity:0.85;
 margin-top:10px;
 margin-bottom:25px;
 ">
-
-Python • Pandas • NumPy • SQL • Excel • Power BI • Streamlit
 
 </div>
 """, unsafe_allow_html=True)
