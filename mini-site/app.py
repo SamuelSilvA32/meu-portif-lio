@@ -143,6 +143,7 @@ e compromisso com resultado: estou à disposição para conversarmos.
 """)
 
 # ---------------- STACK ---------------- #
+# ---------------- STACK ---------------- #
 
 stack = [
     ("python_18894.png", "Python"),
@@ -154,14 +155,15 @@ stack = [
     ("icons8-entorpecido-48.png", "NumPy"),
 ]
 
-cols = st.columns(4)
+# divide em linhas de 4
+rows = [stack[i:i+4] for i in range(0, len(stack), 4)]
 
-for i, (img, label) in enumerate(stack):
-    with cols[i % 4]:
-        safe_image(img, 40)
-        st.caption(label)
-
-st.markdown("---")
+for row in rows:
+    cols = st.columns(len(row))
+    for col, (img, label) in zip(cols, row):
+        with col:
+            safe_image(img, 40)
+            st.caption(label)
 
 # ---------------- PROJETOS ---------------- #
 
