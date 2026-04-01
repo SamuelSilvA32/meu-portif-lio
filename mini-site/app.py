@@ -143,23 +143,23 @@ e compromisso com resultado: estou à disposição para conversarmos.
 """)
 
 # ---------------- STACK ---------------- #
+# ---------------- STACK ---------------- #
 
-stack = [
-    ("python_18894.png", "Python"),
-    ("icons8-pandas-48.png", "Pandas"),
-    ("icons8-sql-48.png", "SQL"),
-    ("icons8-microsoft-excel-2019-48.png", "Excel"),
-    ("icons8-iluminado-48.png", "Streamlit"),
-    ("icons8-poder-bi-2021-48.png", "Power BI"),
-    ("icons8-entorpecido-48.png", "NumPy"),
-]
+st.markdown("### Stack")
 
-cols = st.columns(4)
+st.markdown("""
+<div style="
+text-align:center;
+font-size:15px;
+opacity:0.85;
+margin-top:10px;
+margin-bottom:25px;
+">
 
-for i, (img, label) in enumerate(stack):
-    with cols[i % 4]:
-        safe_image(img, 40)
-        st.caption(label)
+Python • Pandas • NumPy • SQL • Excel • Power BI • Streamlit
+
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("---")
 
