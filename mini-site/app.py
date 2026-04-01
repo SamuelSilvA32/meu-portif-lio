@@ -30,6 +30,7 @@ h1, h2, h3 {
 div[data-testid="stHorizontalBlock"] > div {
     transition: 0.2s;
     border-radius: 12px;
+    padding: 12px;
 }
 
 div[data-testid="stHorizontalBlock"] > div:hover {
@@ -37,20 +38,20 @@ div[data-testid="stHorizontalBlock"] > div:hover {
     transform: translateY(-3px);
 }
 
-.stLinkButton a {
-    border-radius: 8px;
+/* titulo clicável estilo botão */
+.project-title a {
+    display: inline-block;
     padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #f0f2f6;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
-/* cards de projetos alinhados */
-.project-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.project-card .stLinkButton {
-    margin-top: auto;
+.project-title a:hover {
+    background-color: #e6e9ef;
 }
 
 </style>
@@ -198,14 +199,16 @@ cols = st.columns(2)
 
 for i, p in enumerate(projects):
     with cols[i % 2]:
-        st.markdown('<div class="project-card">', unsafe_allow_html=True)
-
         img_card(p["image"])
-        st.subheader(p["title"])
-        st.write(p["desc"])
-        st.link_button("Ver Projeto", p["link"])
 
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown(
+            f'''<div class="project-title">
+<a href="{p["link"]}" target="_blank">{p["title"]}</a>
+</div>''',
+            unsafe_allow_html=True
+        )
+
+        st.write(p["desc"])
 
 st.markdown("---")
 
@@ -255,3 +258,4 @@ Desenvolvido com Streamlit • Icons by Icons8
 
 </div>
 """, unsafe_allow_html=True)
+
