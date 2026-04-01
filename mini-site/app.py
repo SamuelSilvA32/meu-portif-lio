@@ -43,7 +43,8 @@ div[data-testid="stHorizontalBlock"] > div:hover {
     display: inline-block;
     padding: 8px 16px;
     border-radius: 8px;
-    background-color: #f0f2f6;
+    background-color: #000000;
+    color: #ffffff !important;
     text-decoration: none;
     font-weight: 600;
     margin-top: 8px;
@@ -51,7 +52,8 @@ div[data-testid="stHorizontalBlock"] > div:hover {
 }
 
 .project-title a:hover {
-    background-color: #e6e9ef;
+    background-color: #1a1a1a;
+    color: #ffffff !important;
 }
 
 </style>
@@ -258,4 +260,3 @@ Desenvolvido com Streamlit • Icons by Icons8
 
 </div>
 """, unsafe_allow_html=True)
-
