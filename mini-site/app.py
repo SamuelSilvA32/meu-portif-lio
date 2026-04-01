@@ -42,6 +42,17 @@ div[data-testid="stHorizontalBlock"] > div:hover {
     padding: 8px 16px;
 }
 
+/* cards de projetos alinhados */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card .stLinkButton {
+    margin-top: auto;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -187,10 +198,14 @@ cols = st.columns(2)
 
 for i, p in enumerate(projects):
     with cols[i % 2]:
+        st.markdown('<div class="project-card">', unsafe_allow_html=True)
+
         img_card(p["image"])
         st.subheader(p["title"])
         st.write(p["desc"])
         st.link_button("Ver Projeto", p["link"])
+
+        st.markdown('</div>', unsafe_allow_html=True)
 
 st.markdown("---")
 
