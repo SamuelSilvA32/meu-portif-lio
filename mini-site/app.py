@@ -93,8 +93,8 @@ with col1:
         st.markdown(f"""
             <img src="data:image/jpeg;base64,{img}"
             style="
-            width:140px;
-            height:140px;
+            width:143px;
+            height:143px;
             border-radius:50%;
             object-fit:cover;
             ">
