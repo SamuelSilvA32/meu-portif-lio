@@ -145,7 +145,7 @@ e compromisso com resultado: estou à disposição para conversarmos.
 # ---------------- STACK ---------------- #
 # ---------------- STACK ---------------- #
 
-st.markdown("### Stack")
+
 
 st.markdown("""
 <div style="
