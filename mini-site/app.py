@@ -123,7 +123,7 @@ with col2:
     st.write("Analista de Dados Jr")
 
     # contatos no topo
-     st.markdown(f"""
+st.markdown(f"""
 <div style="margin-top:5px;margin-bottom:15px">
 
 <a href="https://github.com/SamuelSilvA32" style="margin-right:12px;">
@@ -145,7 +145,7 @@ with col2:
 </div>
 """, unsafe_allow_html=True)
 
-    st.subheader("Sobre mim")
+st.subheader("Sobre mim")
 
     st.write("""
 📊 Analiso, construo, comunico. Meu objetivo agora é transpor esses 
