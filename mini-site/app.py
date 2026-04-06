@@ -136,11 +136,11 @@ with col2:
     </a>
 
     <a href="mailto:samuelsilva00935@gmail.com" style="margin-right:12px;">
-    <img src="data:image/png;base64,{email}" style="height:22px; vertical-align:middle;">
+    <img src="data:image/png;base64,{email}" style="height:23px; vertical-align:middle;">
     </a>
 
     <a href="https://wa.me/+5524998163999">
-    <img src="data:image/png;base64,{whatsapp}" style="height:22px; vertical-align:middle;">
+    <img src="data:image/png;base64,{whatsapp}" style="height:23px; vertical-align:middle;">
     </a>
 
     </div>
