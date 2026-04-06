@@ -142,6 +142,25 @@ com soluções sustentadas em dados.
 e compromisso com resultado: estou à disposição para conversarmos.
 """)
 
+
+# ---------------- STACK ---------------- #
+
+
+
+st.markdown("""
+<div style="
+text-align:center;
+font-size:15px;
+opacity:0.85;
+margin-top:10px;
+margin-bottom:25px;
+">
+
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("---")
+
 # ---------------- PROJETOS ---------------- #
 
 st.markdown("## Projetos")
