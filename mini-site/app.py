@@ -123,28 +123,28 @@ with col2:
     st.write("Analista de Dados Jr")
 
     # contatos no topo
-st.markdown(f"""
-<div style="margin-top:5px;margin-bottom:15px">
+    st.markdown(f"""
+    <div style="margin-top:5px;margin-bottom:15px">
 
-<a href="https://github.com/SamuelSilvA32" style="margin-right:12px;">
-<img src="data:image/png;base64,{github}" style="height:22px; vertical-align:middle;">
-</a>
+    <a href="https://github.com/SamuelSilvA32" style="margin-right:12px;">
+    <img src="data:image/png;base64,{github}" style="height:22px; vertical-align:middle;">
+    </a>
 
-<a href="https://linkedin.com/in/samuel-d-a03266399" style="margin-right:12px;">
-<img src="data:image/png;base64,{linkedin}" style="height:22px; vertical-align:middle;">
-</a>
+    <a href="https://linkedin.com/in/samuel-d-a03266399" style="margin-right:12px;">
+    <img src="data:image/png;base64,{linkedin}" style="height:22px; vertical-align:middle;">
+    </a>
 
-<a href="mailto:samuelsilva00935@gmail.com" style="margin-right:12px;">
-<img src="data:image/png;base64,{email}" style="height:22px; vertical-align:middle;">
-</a>
+    <a href="mailto:samuelsilva00935@gmail.com" style="margin-right:12px;">
+    <img src="data:image/png;base64,{email}" style="height:22px; vertical-align:middle;">
+    </a>
 
-<a href="https://wa.me/+5524998163999">
-<img src="data:image/png;base64,{whatsapp}" style="height:22px; vertical-align:middle;">
-</a>
+    <a href="https://wa.me/+5524998163999">
+    <img src="data:image/png;base64,{whatsapp}" style="height:22px; vertical-align:middle;">
+    </a>
 
-</div>
-""", unsafe_allow_html=True)
-
+    </div>
+    """, unsafe_allow_html=True)
+    
 st.subheader("Sobre mim")
 
     st.write("""
