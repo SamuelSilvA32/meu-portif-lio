@@ -135,7 +135,7 @@ with col2:
     <img src="data:image/png;base64,{linkedin}" style="height:22px; vertical-align:middle;">
     </a>
 
-    <a href="mailto:samuelsilva00935@gmail.com" style="margin-right:12px;">
+    <a href="mailto:samuelsilva00935@gmail.com" style="margin-right:13px;">
     <img src="data:image/png;base64,{email}" style="height:23px; vertical-align:middle;">
     </a>
 
