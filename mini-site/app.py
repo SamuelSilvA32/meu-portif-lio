@@ -94,11 +94,16 @@ def img_card(name):
             border-radius:10px;
             ">
         """, unsafe_allow_html=True)
-
-
+        
+# ---------------- HEADER ---------------- #
 # ---------------- HEADER ---------------- #
 
 img = img_to_base64("perfilprof.jpg")
+
+github = img_to_base64("icons8-github-24.png")
+linkedin = img_to_base64("icons8-linkedin-24.png")
+email = img_to_base64("icons8-gmail-novo-50.png")
+whatsapp = img_to_base64("icons8-whatsapp-32.png")
 
 col1, col2 = st.columns([1,3])
 
@@ -117,6 +122,29 @@ with col1:
 with col2:
     st.title("Samuel de Andrade da Silva")
     st.write("Analista de Dados Jr")
+
+    # contatos no topo
+    st.markdown(f"""
+    <div style="margin-top:5px;margin-bottom:15px">
+
+    <a href="https://github.com/SamuelSilvA32" style="margin-right:12px;">
+    <img src="data:image/png;base64,{github}" width="22">
+    </a>
+
+    <a href="https://linkedin.com/in/samuel-d-a03266399" style="margin-right:12px;">
+    <img src="data:image/png;base64,{linkedin}" width="22">
+    </a>
+
+    <a href="mailto:samuelsilva00935@gmail.com" style="margin-right:12px;">
+    <img src="data:image/png;base64,{email}" width="22">
+    </a>
+
+    <a href="https://wa.me/+5524998163999">
+    <img src="data:image/png;base64,{whatsapp}" width="22">
+    </a>
+
+    </div>
+    """, unsafe_allow_html=True)
 
     st.subheader("Sobre mim")
 
@@ -141,8 +169,6 @@ com soluções sustentadas em dados.
 📍 Se você procura alguém disposto a aprender fazendo, com base sólida 
 e compromisso com resultado: estou à disposição para conversarmos.
 """)
-
-
 # ---------------- STACK ---------------- #
 
 
@@ -211,35 +237,6 @@ for i, p in enumerate(projects):
         st.write(p["desc"])
 
 st.markdown("---")
-
-# ---------------- CONTATO ---------------- #
-
-github = img_to_base64("icons8-github-24.png")
-linkedin = img_to_base64("icons8-linkedin-24.png")
-email = img_to_base64("icons8-gmail-novo-50.png")
-whatsapp = img_to_base64("icons8-whatsapp-32.png")
-
-st.markdown(f"""
-<div style="text-align:center">
-
-<a href="https://github.com/SamuelSilvA32" style="margin: 0 10px;">
-<img src="data:image/png;base64,{github}" width="28">
-</a>
-
-<a href="https://linkedin.com/in/samuel-d-a03266399" style="margin: 0 10px;">
-<img src="data:image/png;base64,{linkedin}" width="28">
-</a>
-
-<a href="mailto:samuelsilva00935@gmail.com" style="margin: 0 10px;">
-<img src="data:image/png;base64,{email}" width="28">
-</a>
-
-<a href="https://wa.me/+5524998163999" style="margin: 0 10px;">
-<img src="data:image/png;base64,{whatsapp}" width="28">
-</a>
-
-</div>
-""", unsafe_allow_html=True)
 
 # ---------------- FOOTER ---------------- #
 
