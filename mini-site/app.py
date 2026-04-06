@@ -142,27 +142,6 @@ com soluções sustentadas em dados.
 e compromisso com resultado: estou à disposição para conversarmos.
 """)
 
-# ---------------- STACK ---------------- #
-
-stack = [
-    ("python_18894.png", "Python"),
-    ("icons8-pandas-48.png", "Pandas"),
-    ("icons8-sql-48.png", "SQL"),
-    ("icons8-microsoft-excel-2019-48.png", "Excel"),
-    ("icons8-iluminado-48.png", "Streamlit"),
-    ("icons8-poder-bi-2021-48.png", "Power BI"),
-    ("icons8-entorpecido-48.png", "NumPy"),
-]
-
-cols = st.columns(4)
-
-for i, (img, label) in enumerate(stack):
-    with cols[i % 4]:
-        safe_image(img, 40)
-        st.caption(label)
-
-st.markdown("---")
-
 # ---------------- PROJETOS ---------------- #
 
 st.markdown("## Projetos")
