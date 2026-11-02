@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="description" content="Portfólio de Samuel de Andrade da Silva, desenvolvedor, formado em Análise e Desenvolvimento de Sistemas.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E💻%3C/text%3E%3C/svg%3E">
+<title>Portfólio - Samuel Silva</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+ 
+<header class="header">
+  <nav class="container nav" aria-label="Principal">
+    <a class="logo" href="#inicio">&lt;SamuelSilva/&gt;</a>
+    <ul class="nav__list" id="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#formacao">Formação</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="nav__tools">
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="Alternar tema">◐</button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+    </div>
+  </nav>
+</header>
+ 
+<main id="main">
+  <section class="hero" id="inicio">
+    <div class="container">
+      <p class="hero__eyebrow">Olá, eu sou</p>
+      <h1>Samuel de Andrade da Silva</h1>
+      <p>Desenvolvedor em formado em Análise e Desenvolvimento de Sistemas. Foco em transformar problemas reais em soluções web simples, organizadas e eficientes.</p>
+      <div class="hero__cta">
+        <a class="btn" href="#projetos">Ver projetos</a>
+        <a class="btn btn--ghost" href="#contato">Entrar em contato</a>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="section reveal" id="sobre">
+    <div class="container">
+      <h2>Sobre</h2>
+      <p>Venho construindo uma base sólida através de projetos acadêmicos e pessoais. Nesses projetos, aplico boas práticas de mercado como código limpo, versionamento com Git e atenção à acessibilidade e segurança.</p>
+      <!-- <p class="muted">Estou em busca da minha primeira oportunidade para aprender com um time, contribuir com entregas reais e evoluir como profissional.</p> -->
+    </div>
+  </section>
+ 
+  <section class="section reveal" id="habilidades">
+    <div class="container">
+      <h2>Habilidades</h2>
+      <div class="grid skills" id="skills"></div>
+    </div>
+  </section>
+ 
+  <section class="section reveal" id="projetos">
+    <div class="container">
+      <h2>Projetos</h2>
+      <div class="grid" id="projects"></div>
+    </div>
+  </section>
+ 
+  <section class="section reveal" id="formacao">
+    <div class="container">
+      <h2>Formação</h2>
+      <div class="timeline">
+        <h3>Tecnologia em Análise e Desenvolvimento de Sistemas</h3>
+        <p class="muted">Nome da Instituição · 2023 – 2026</p>
+        <p>Lógica de programação, estrutura de dados, bancos de dados, engenharia de software e metodologias ágeis.</p>
+      </div>
+    </div>
+  </section>
+<section class="section reveal" id="contato">
+  <div class="container">
+    <h2>Contato</h2>
+    
+    <!-- O FORM COMEÇA AQUI -->
+    <form id="form" action="https://formspree.io/f/xljjowad" method="POST">
+      
+      <div class="field">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required>
+        <p class="error" data-error-for="name" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+        <p class="error" data-error-for="email" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" maxlength="1000" required></textarea>
+        <p class="error" data-error-for="message" role="alert"></p>
+      </div>
+      
+      <button class="btn" type="submit">Enviar mensagem</button>
+      
+    </form>
+    <!-- O FORM TERMINA AQUI -->
+
+  </div>
+</section>
+
+</main>
+ 
+<footer class="footer muted">
+  <div class="container">
+    © <span id="year"></span> Samuel de Andrade da Silva · Feito com HTML, CSS e JavaScript
+  </div>
+</footer>
+ 
+<script src="script.js" defer></script>
+</body>
+</html>
+ 
